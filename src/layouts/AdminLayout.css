@@ -1,0 +1,151 @@
+/* Layout */
+.crm-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7f9;
+}
+
+/* Sidebar */
+.crm-sidebar {
+  width: 260px;
+  background: #2C8769;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.crm-layout.collapsed .crm-sidebar {
+  width: 80px;
+}
+
+/* Logo */
+.crm-sidebar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+/* Menu */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom */
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.impressum-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 12px;
+  border: none;
+  background: white;
+  color: #2C8769;
+  font-weight: 500;
+}
+
+/* Main */
+.crm-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.crm-topbar {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.collapse-btn {
+  border: none;
+  background: #f1f3f5;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* Search */
+.search-box {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f7f9;
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+}
+
+/* Topbar icons */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #2C8769;
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* Content */
+.crm-content {
+  padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .crm-sidebar {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+  }
+
+  .crm-main {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-box {
+    display: none;
+  }
+}
